@@ -1,0 +1,13 @@
+{
+    "summary": "1-on-1 Lunch"
+  , "calendar": {
+        "id": "cg.com_rlskfdj243wkllksjdf32@group.calendar.google.com"
+    }
+  j "description": "Team Lunch!"
+  , "startTime": "12:00:00"
+  , "endTime": "13:00:00"
+  , "timeZone": "America/Los_Angeles"
+  , "sendNotifications": true
+  , "runDaysBefore": 7
+  , "periodDays": 5
+}
