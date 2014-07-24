@@ -112,7 +112,7 @@ def main(argv):
                 eventDate = lunchEventStartDate
             else:
                 eventDate = eventDate + datetime.timedelta(days=1)
-                pair = []
+            pair = []
 
     if pair:
         match_queue = copy.copy(MEMBERS)
