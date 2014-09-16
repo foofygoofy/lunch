@@ -94,6 +94,7 @@ def main(argv):
         days=SETTINGS['runDaysBefore'])
     lunchEventEndDate = lunchEventStartDate + datetime.timedelta(
         days=SETTINGS['periodDays']-1)
+    dayApart = SETTINGS.get('dayApart', 1)
     eventDate = lunchEventStartDate
 
     # Start matching
@@ -108,10 +109,10 @@ def main(argv):
         if len(pair) == 2:
             print "%s %s" % (pair[0]['name'], pair[1]['name'])
             create_event(events, pair, eventDate)
-            if eventDate == lunchEventEndDate:
+            if eventDate >= lunchEventEndDate:
                 eventDate = lunchEventStartDate
             else:
-                eventDate = eventDate + datetime.timedelta(days=1)
+                eventDate = eventDate + datetime.timedelta(days=dayApart)
             pair = []
 
     if pair:
